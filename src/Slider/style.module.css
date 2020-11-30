@@ -1,0 +1,32 @@
+.wrapper {
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    --track-height: 4px;
+    --pin-color: red;
+    --track-color: green;
+    --selected-track-piece-color: var(--pin-color);
+}
+
+.track {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc( 50% - var(--track-height) / 2 );
+    height: var(--track-height);
+    background: var(--track-color);
+}
+
+.selectedTrack {
+    composes: track;
+    background: var(--selected-track-piece-color);
+}
+
+.pin {
+    border-radius: 100%;
+    background: var(--pin-color);
+    position: absolute;
+    cursor: pointer;
+    box-sizing: border-box;
+}
